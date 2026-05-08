@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery — The Legend of Legiona</title>
+    <link rel="icon" type="image/png" href="/main/assets/images/logo.png">
+    <meta name="description" content="The official photo archive of The Legend of Legiona — history captured in pictures, 2020–2024.">
+    <meta property="og:url" content="https://thelegendoflegiona.github.io/gallery/">
+    <meta property="og:image" content="/gallery/assets/images/logo.png">
+    <meta property="og:type" content="website">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/gallery/assets/css/style.css">
+</head>
+<body>
+    <div id="scroll-progress"></div>
+    <div id="cur-dot"></div>
+    <div id="cur-ring"></div>
+
+    <nav class="netbar" id="netbar" aria-label="Network">
+        <div class="netbar-inner">
+            <a href="https://faizzzlol.github.io/PaizCorp/">PAIZ® CORP</a>
+            <a href="/main/">THE LOL</a>
+            <a href="https://faizzzlol.github.io/PaizCorp/PaizShop/">PAIZ SHOP</a>
+            <a href="https://faizzzlol.github.io/PaizCorp/PaizChicken/">PAIZ CHICKEN</a>
+            <a href="https://faizzzlol.github.io/PaizCorp/PaizProductions/">PAIZPRODUCTIONS</a>
+            <a href="https://faizzzlol.github.io/PaizCorp/PaizProductions/thelolmovie">THE LOL MOVIE</a>
+            <a href="/gov/">GOVERNMENT</a>
+            <a href="/isc/">ISC</a>
+            <a href="https://faizzzlol.github.io/thelol/tlr/">TL RAILWAYS</a>
+        </div>
+    </nav>
+
+    <header class="sitenav" id="sitenav">
+        <a href="/main/" class="sitenav-logo">
+            <img src="/main/assets/images/logo.png" alt="The LoL" onerror="this.style.display='none'">
+            <span>THE LOL</span>
+        </a>
+        <nav class="sitenav-links" aria-label="Main">
+            <a href="/main/about/">ABOUT</a>
+            <a href="#" class="active">GALLERY</a>
+            <a href="/main/">HOME</a>
+            <a href="/gov/">GOVERNMENT</a>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+        <a href="/main/" onclick="closeMobile()">HOME</a>
+        <a href="/main/about/" onclick="closeMobile()">ABOUT THE LOL</a>
+        <a href="/gov/" onclick="closeMobile()">GOVERNMENT</a>
+        <a href="/isc/" onclick="closeMobile()">ISC</a>
+        <a href="/gov/systems/archives/" onclick="closeMobile()">LEGAL ARCHIVE</a>
+    </nav>
+
+    <div class="page-header">
+        <div class="ph-inner">
+            <div class="ph-eyebrow">THE LEGEND OF LEGIONA // OFFICIAL PHOTO ARCHIVE</div>
+            <h1>A Nation in<br><em>Pictures.</em></h1>
+            <p>Every screenshot, every build, every moment — captured by Faiz, Dyno, Ikan, and the people of The LoL and Skyxion. The complete visual history from 2020 to 24 August 2024.</p>
+            <div class="ph-stats">
+                <div class="ph-stat"><span class="sv" id="totalCount">-</span><span class="sl">TOTAL PHOTOS</span></div>
+                <div class="ph-stat"><span class="sv">8</span><span class="sl">ERAS</span></div>
+                <div class="ph-stat"><span class="sv">~5</span><span class="sl">YRS OF HISTORY</span></div>
+                <div class="ph-stat"><span class="sv">AUG 2024</span><span class="sl">LAST ACTIVE SERVER</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="filter-bar" id="filterBar">
+        <div class="filter-row" id="eraFilterRow">
+            <span class="filter-row-label">ERA</span>
+            <button class="filt active" data-era="all">ALL <span class="fc" id="cnt-all"></span></button>
+            <button class="filt" data-era="0">PRE-ERA <span class="fc" id="cnt-0"></span></button>
+            <button class="filt" data-era="1">THE SUS <span class="fc" id="cnt-1"></span></button>
+            <button class="filt" data-era="2">GOLDEN ERA <span class="fc" id="cnt-2"></span></button>
+            <button class="filt" data-era="3">ELECTION <span class="fc" id="cnt-3"></span></button>
+            <button class="filt" data-era="4">CHAOS <span class="fc" id="cnt-4"></span></button>
+            <button class="filt" data-era="5">RESTORATION <span class="fc" id="cnt-5"></span></button>
+            <button class="filt" data-era="6">REBUILDING <span class="fc" id="cnt-6"></span></button>
+            <button class="filt" data-era="7">FINAL ERA <span class="fc" id="cnt-7"></span></button>
+        </div>
+        <div class="filter-row" id="byFilterRow">
+            <span class="filter-row-label">BY</span>
+            <button class="filt active" data-by="all">EVERYONE</button>
+        </div>
+        <div class="search-row">
+            <input type="text" class="search-input" id="searchInput" placeholder="SEARCH PHOTOS..." autocomplete="on" spellcheck="true">
+            <button class="search-clear" id="searchClear">✕ CLEAR</button>
+            <span class="result-count">SHOWING <span id="visibleCount">0</span> PHOTOS</span>
+        </div>
+    </div>
+
+    <main>
+        <div class="gallery-wrap" id="galleryWrap"></div>
+        <div id="noResults">
+            <div class="nri">🔍</div>
+            <h3>No photos found.</h3>
+            <p>TRY A DIFFERENT FILTER OR SEARCH TERM</p>
+        </div>
+    </main>
+
+    <div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+        <div class="lb-inner">
+            <button class="lb-close" id="lbClose">✕ CLOSE</button>
+            <div class="lb-img-wrap">
+                <button class="lb-prev" id="lbPrev" aria-label="Previous">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <img id="lbImg" src="" alt="">
+                <button class="lb-next" id="lbNext" aria-label="Next">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+            </div>
+            <div class="lb-panel">
+                <div class="lb-era-tag" id="lbEraTag"></div>
+                <div class="lb-title" id="lbTitle"></div>
+                <div class="lb-date" id="lbDate"></div>
+                <p class="lb-desc" id="lbDesc"></p>
+                <div class="lb-div"></div>
+                <div class="lb-by" id="lbBy"></div>
+                <div class="lb-counter" id="lbCounter"></div>
+                <div class="lb-chapter" id="lbChapter"></div>
+            </div>
+            <div class="lb-hint">← → ARROW KEYS TO NAVIGATE · ESC TO CLOSE · SWIPE ON MOBILE</div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-main">
+            <div>
+                <div class="f-logo">The <em>LoL</em></div>
+                <p class="f-desc">The Legend of Legiona. A sovereign nation in Skyxion built on unity, freedom, innovation, and honour since 2020.</p>
+                <a href="https://faizzzlol.github.io/PaizCorp/" class="f-network-badge">
+                    <div><div class="fbn-label">PART OF THE</div><div class="fbn-name">PAIZ® CORP NETWORK</div></div>
+                </a>
+            </div>
+            <div class="f-col"><h5>NATION</h5><a href="/main/about/">About The LoL</a><a href="#">Gallery</a><a href="/main/#founders">Founders</a></div>
+            <div class="f-col"><h5>PORTALS</h5><a href="/gov/">Government</a><a href="/isc/">ISC</a><a href="/thelol/tlr/">TL Railways</a></div>
+            <div class="f-col"><h5>DOCUMENTS</h5><a href="/gov/systems/archives/">Legal Archive</a></div>
+            <div class="f-col network"><h5>NETWORK</h5><a href="https://faizzzlol.github.io/PaizCorp/">Paiz® Corp Hub</a><a href="https://faizzzlol.github.io/PaizCorp/PaizShop/">Paiz Shop</a><a href="https://faizzzlol.github.io/PaizCorp/PaizChicken/">Paiz Chicken</a><a href="https://faizzzlol.github.io/PaizCorp/PaizProductions/">PaizProductions</a><a href="https://faizzzlol.github.io/PaizCorp/PaizProductions/thelolmovie">The LoL Movie</a></div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-inner">
+                <p>© 2026 THE LEGEND OF LEGIONA — ALL RIGHTS RESERVED</p>
+                <p>PART OF THE <a href="https://faizzzlol.github.io/PaizCorp/">PAIZ® CORP</a> NETWORK // SKYXION: ALTAËR ERA</p>
+            </div>
+        </div>
+        <div class="footer-legal">
+            <p>LEGAL DISCLAIMER — The Legend of Legiona (The LoL) is an independent community project within Minecraft. Not affiliated with or associated with Kawaiisho, Mojang AB, or Microsoft Corporation.</p>
+        </div>
+    </footer>
+
+    <script src="/gallery/assets/js/script.js"></script>
+</body>
+</html>
