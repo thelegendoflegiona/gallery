@@ -25,7 +25,7 @@ const GALLERY_DATA = [
 // ── ERA 0: PRE-ERA — NEVERLAND (2020) ────────────────────────────
 {
     era: 0,
-    src: "https://drive.google.com/thumbnail?id=1Hx2TSA1FqfnHu0F74KpM8iaeyD2jM7ZZ&sz=w1080",
+    src: "https://i.ibb.co/B2g2mJdN/by-DYNO-a-selfie-with-syaz-dyno-and-unidentified-player.jpg",
     title: "Neverland — Group Selfie",
     rawDate: "2020",
     date: "2020",
@@ -35,7 +35,7 @@ const GALLERY_DATA = [
 },
 {
     era: 0,
-    src: "https://drive.google.com/thumbnail?id=1DHOAEoHOh_YJO635tjB0zleR7J4amuXC",
+    src: "https://i.ibb.co/zWsF28tk/by-DYNO-maybe-BEFORE-THE-FLOWEY-BLOODMOON-EVENT.jpg",
     title: "The Flowey Bloodmoon Event",
     rawDate: "2020",
     date: "2020",
