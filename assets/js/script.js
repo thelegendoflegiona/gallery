@@ -35,7 +35,7 @@ const GALLERY_DATA = [
 },
 {
     era: 0,
-    src: "/thelol/gallery/assets/[1]_NEVERLAND_2020/byDYNO_maybe_BEFORE_THE_FLOWEY_BLOODMOON_EVENT.jpg",
+    src: "https://drive.google.com/thumbnail?id=1DHOAEoHOh_YJO635tjB0zleR7J4amuXC",
     title: "The Flowey Bloodmoon Event",
     rawDate: "2020",
     date: "2020",
