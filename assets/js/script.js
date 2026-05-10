@@ -25,7 +25,7 @@ const GALLERY_DATA = [
 // ── ERA 0: PRE-ERA — NEVERLAND (2020) ────────────────────────────
 {
     era: 0,
-    src: "https://drive.google.com/uc?export=view&id=1Hx2TSA1FqfnHu0F74KpM8iaeyD2jM7ZZ",
+    src: "https://drive.google.com/thumbnail?id=1Hx2TSA1FqfnHu0F74KpM8iaeyD2jM7ZZ&sz=w1080",
     title: "Neverland — Group Selfie",
     rawDate: "2020",
     date: "2020",
