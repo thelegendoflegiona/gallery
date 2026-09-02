@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Page Not Found · The LoL Gallery</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/gallery/assets/css/style.css">
+<style>
+  body{min-height:100vh;display:flex;flex-direction:column;background:var(--charcoal);color:var(--off-white);font-family:inherit;}
+  .nf-nav{display:flex;align-items:center;justify-content:space-between;padding:20px 5%;border-bottom:1px solid var(--border-dark);}
+  .nf-logo{color:var(--off-white);text-decoration:none;font-weight:700;letter-spacing:0.04em;}
+  .nf-back{color:var(--emerald);text-decoration:none;font-size:0.85rem;}
+  .nf-main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:4rem 5%;}
+  .nf-code{font-size:clamp(3.5rem,10vw,6rem);font-weight:800;color:var(--gold);line-height:1;margin-bottom:1rem;}
+  .nf-title{font-size:1.3rem;font-weight:600;margin-bottom:0.75rem;}
+  .nf-desc{max-width:440px;color:var(--off-white);opacity:0.7;line-height:1.6;margin-bottom:2rem;}
+  .nf-btn{display:inline-block;padding:0.8rem 1.8rem;background:var(--emerald);color:#fff;text-decoration:none;border-radius:4px;font-weight:600;transition:transform 0.2s ease;}
+  .nf-btn:hover{transform:translateY(-2px);}
+</style>
+</head>
+<body>
+  <nav class="nf-nav">
+    <a href="/main/" class="nf-logo">THE LOL</a>
+    <a href="/gallery/" class="nf-back">← Gallery Home</a>
+  </nav>
+  <main class="nf-main">
+    <div class="nf-code">404</div>
+    <h1 class="nf-title">Photo not found</h1>
+    <p class="nf-desc">The page or photo you're looking for doesn't exist, was moved, or was archived elsewhere.</p>
+    <a href="/gallery/" class="nf-btn">← Back to the Gallery</a>
+  </main>
+<script type="module" src="/gov/assets/js/stats.js"></script>
+</body>
+</html>
